@@ -1,0 +1,17 @@
+<div>
+  <form #value="ngForm" (ngSubmit)="SendMoney()">
+    <div class="main">
+      <h2>Send Money Online</h2>
+      <div class="subHead-1">
+        <h5>Your receiver's country and Send amount</h5>
+
+        <select class="country" name="country" >
+          <option hidden selected value="country">Country name</option>
+          <option *ngFor="let country of countries" [value]="country">
+            {{ country }}
+          </option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
